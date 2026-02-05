@@ -34,9 +34,14 @@ function App() {
           path: "contacts",
           element: <ContactView/>
         },
-      ]
+      ],
+      
     }
-  ]);
+  ],
+   {
+    basename: "/personal_portfolio", // 👈 YAHAN
+  }
+);
 
   return (
   <RouterProvider router={router}/>
