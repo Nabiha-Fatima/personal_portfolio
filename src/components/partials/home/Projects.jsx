@@ -6,7 +6,7 @@ const Projects = () => {
       title: "Portfolio Website",
       description: "Personal portfolio built with React and Tailwind CSS.",
       tech: ["React", "Tailwind", "Vite"],
-      link: "#",
+      link: " https://nabiha-fatima.github.io/personal_portfolio/",
       image: "/images/portfolio-hero.png",
     },
     {
