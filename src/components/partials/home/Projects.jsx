@@ -1,20 +1,21 @@
 import { Icon } from "@iconify/react";
 
 const Projects = () => {
+  const baseUrl = import.meta.env.BASE_URL;
   const projects = [
     {
       title: "Portfolio Website",
       description: "Personal portfolio built with React and Tailwind CSS.",
       tech: ["React", "Tailwind", "Vite"],
       link: "https://nabiha-fatima.github.io/personal_portfolio",
-      image: "/images/personal-portfolio.png",
+      image: `${baseUrl}images/personal-portfolio.png`,
     },
     {
       title: "Restaurant Website",
       description: "Fully responsive restaurant site built with HTML, CSS, Bootstrap & JavaScript. Includes AOS scroll animations and Swiper slider for gallery and sections.",
       tech: ["HTML", "CSS", "Bootstrap", "JavaScript", "AOS", "Swiper"],
       link: "https://nabiha-fatima.github.io/Tasty-Bites-Restaurant-Website/",
-      image: "/images/resturant-website.png",
+      image: `${baseUrl}images/resturant-website.png`,
     },
     
   ];
