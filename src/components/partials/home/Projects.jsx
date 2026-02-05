@@ -16,13 +16,7 @@ const Projects = () => {
       link: "https://nabiha-fatima.github.io/Tasty-Bites-Restaurant-Website/",
       image: "/images/resturant-website.png",
     },
-    {
-      title: "Weather Dashboard",
-      description: "Weather info with search and favorite cities.",
-      tech: ["React", "API", "Tailwind"],
-      link: "#",
-      image: null,
-    },
+    
   ];
 
   return (
