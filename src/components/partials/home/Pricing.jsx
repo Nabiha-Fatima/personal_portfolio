@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Pricing = () => {
   const plans = [
     {
@@ -42,7 +44,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="bg-secondary/80 py-16 sm:py-20 md:py-24">
+    <section id="pricing" className="bg-secondary/95 py-16 sm:py-20 md:py-24">
       <div className="custom_container px-5 sm:px-6 md:px-0">
         <div className="text-center mb-12 sm:mb-14">
           <h2 className="font-poppins text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3">
@@ -96,16 +98,16 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <button
-                type="button"
-                className={`mt-auto w-full rounded-lg px-4 py-2.5 text-sm sm:text-base font-poppins font-medium transition-colors ${
+              <Link
+                to="/contacts"
+                className={`mt-auto inline-flex items-center justify-center w-full rounded-lg px-4 py-2.5 text-sm sm:text-base font-poppins font-medium transition-colors ${
                   plan.highlight
                     ? "bg-primary text-secondary hover:bg-primary/90"
                     : "border border-primary/40 text-primary hover:bg-primary/10"
                 }`}
               >
-                Request this package
-              </button>
+                Contact for this package
+              </Link>
             </div>
           ))}
         </div>
