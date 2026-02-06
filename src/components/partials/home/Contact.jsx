@@ -2,7 +2,12 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   const contactLinks = [
     { icon: "mdi:email-outline", label: "Email", value: "nabihaf567@gmail.com", href: "mailto:nabihaf567@gmail.com" },
@@ -16,7 +21,13 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your form submit logic (e.g. email API)
+
+    const subject = formData.subject || `New message from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nSubject: ${subject}\n\nMessage:\n${formData.message}`;
+
+    window.location.href = `mailto:nabihaf567@gmail.com?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -94,6 +105,18 @@ const Contact = () => {
                   />
                 </label>
               </div>
+              <label className="block">
+                <span className="font-roboto text-muted text-sm mb-1.5 block">Subject</span>
+                <input
+                  type="text"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  placeholder="Subject of your message"
+                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder:text-muted/60 font-roboto text-sm sm:text-base focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors"
+                />
+              </label>
               <label className="block">
                 <span className="font-roboto text-muted text-sm mb-1.5 block">Message</span>
                 <textarea
